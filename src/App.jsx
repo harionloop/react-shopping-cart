@@ -1,7 +1,7 @@
 import "./app.css";
 
 import Shop from "./Pages/Shop/Shop";
-import Nav from "./Navbar/Nav";
+import Nav from "./Components/Navbar/Nav";
 
 function App() {
   return (
