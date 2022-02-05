@@ -1,0 +1,141 @@
+.cart {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart>h1 {
+    font-size: 34px;
+    font-weight: bold;
+    font-family: "Supermercado One", cursive;
+}
+
+.cart>p {
+    font-size: 18px;
+    font-family: "Lora", "serif";
+    color: rgb(120, 120, 120);
+}
+
+
+/* Cart top part */
+
+.c-top {
+    margin-top: 10px;
+    display: flex;
+    justify-self: space-evenly;
+    align-items: center;
+}
+
+
+/* Cart top left part */
+
+.c-left {
+    flex: 6;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cp-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.cp-details>h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cp-details>p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cp-img {
+    object-fit: cover;
+    border-radius: 7px;
+    width: 55px;
+    height: 55px;
+}
+
+
+/* Cart top right part */
+
+.c-right {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cr-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100px;
+}
+
+.fa-minus {
+    cursor: pointer;
+}
+
+.fa-plus {
+    cursor: pointer;
+}
+
+.cr-butt {
+    color: aliceblue;
+    margin-top: 3px;
+    background-color: rgb(243, 19, 19);
+    border: none;
+    border-radius: 4px;
+    width: 60px;
+    padding: 3px;
+    font-size: 12px;
+    font-family: "Lora", "serif";
+    cursor: pointer;
+}
+
+.cr-butt:hover {
+    transform: scale(1.02);
+}
+
+
+/* Cart bottom part */
+
+.c-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: rgb(247, 249, 251);
+}
+
+.c-subtotal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+}
+
+.c-bottom>span {
+    font-size: 14px;
+    color: lightslategray;
+}
+
+.c-checkout-butt {
+    margin-top: 20px;
+    width: 65%;
+    height: 48px;
+    background-color: #70e000;
+    color: white;
+    padding: 5px;
+    font-size: 24px;
+    font-family: "Lora", "serif";
+    border: none;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.c-checkout-butt:active {
+    transform: scale(0.98);
+}

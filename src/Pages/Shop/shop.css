@@ -1,0 +1,16 @@
+.shop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.s-left {
+    flex: 7;
+    display: grid;
+    grid-template-columns: 450px 450px;
+    gap: 30px;
+    margin-left: 20px;
+}
+
+.s-right {
+    flex: 3;
+}
