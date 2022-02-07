@@ -32,14 +32,14 @@ export default function CartPage({ itemCart, iQuantity, setIQuantity }) {
           setIQuantity={setIQuantity}
           price={price}
         />
-        {price <= 100 ? (
-          <span>No Discount below $100 Shopping</span>
-        ) : (
-          <button className="c-p-discountButt" onClick={() => applyDiscount()}>
-            Discount
-          </button>
-        )}
       </div>
+      {price <= 100 ? (
+        <span>No Discount below $100 Shopping</span>
+      ) : (
+        <button className="c-p-discountButt" onClick={() => applyDiscount()}>
+          Discount
+        </button>
+      )}
     </div>
   );
 }
