@@ -1,6 +1,6 @@
 import "./nav.css";
 
-export default function Nav() {
+export default function Nav({ iQuantity }) {
   return (
     <div className="nav">
       <div className="nav-left">
@@ -21,7 +21,7 @@ export default function Nav() {
             className="fas fa-shopping-cart"
           ></i>
         </span>
-        <span>0</span>
+        <span>{iQuantity}</span>
       </div>
     </div>
   );

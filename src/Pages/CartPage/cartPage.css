@@ -1,0 +1,37 @@
+.cartpage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.c-p-cart {
+    width: 50%;
+}
+
+.c-p-discountButt {
+    margin-top: 40px;
+    width: 50%;
+    height: 48px;
+    background-color: orangered;
+    color: white;
+    padding: 5px;
+    font-size: 24px;
+    font-family: "Lora", "serif";
+    border: none;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.c-p-shop {
+    margin-bottom: 10px;
+    width: 100px;
+    height: 48px;
+    background-color: orangered;
+    color: white;
+    padding: 5px;
+    font-size: 24px;
+    font-family: "Lora", "serif";
+    border: none;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
