@@ -5,9 +5,13 @@ import Cart from "../../Components/Cart/Cart";
 
 import "./cartPage.css";
 
-export default function CartPage({ itemCart, iQuantity, setIQuantity }) {
-  const [price, setPrice] = useState(100);
-
+export default function CartPage({
+  itemCart,
+  iQuantity,
+  setIQuantity,
+  price,
+  setPrice,
+}) {
   const applyDiscount = () => {
     if (price < 100) {
       <span> No Discount below $100 Shopping</span>;

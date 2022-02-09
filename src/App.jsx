@@ -9,13 +9,10 @@ import CartPage from "./Pages/CartPage/CartPage";
 
 function App() {
   const [data, setData] = useState([]);
+  const [price, setPrice] = useState(0);
   const [itemCart, setItemCart] = useState([]);
-  // const itemCart = [];
-  const [item, setItem] = useState([]);
-
-  const [iPrice, setIPrice] = useState(0);
-  const [iName, setIName] = useState("");
   const [iQuantity, setIQuantity] = useState(0);
+
   useEffect(() => {
     const fetchData = async () => {
       const res = await axios.get(
@@ -26,13 +23,31 @@ function App() {
     fetchData();
   });
 
-  const handleAddItem = (d) => {
-    setIPrice(data.price);
-    setIName(data.item_name);
-    setIQuantity(iQuantity + 1);
-    itemCart.push(d);
+  const handleAddItem = (data) => {
+    itemCart.push(data);
 
-    setItem(data);
+    const ids = itemCart.map((o) => o.id);
+    const products = itemCart.filter(
+      ({ id }, index) => !ids.includes(id, index + 1)
+    );
+    setItemCart(products);
+
+    if (products) {
+      let count = 1;
+      data.count = count;
+      const p = products.map((p) => p.id);
+      if (p.includes(data.id)) {
+        data.count = count++;
+      } else {
+        data.count = count;
+      }
+      console.log(data.id);
+      console.log(p);
+    }
+
+    products.unshift(data);
+    setPrice(price + data.price);
+    setIQuantity(iQuantity + 1);
   };
 
   return (
@@ -45,13 +60,10 @@ function App() {
             path="/"
             element={
               <Shop
-                item={item}
+                price={price}
                 productData={data}
-                iPrice={iPrice}
-                iName={iName}
                 itemCart={itemCart}
                 iQuantity={iQuantity}
-                serIPrice={setIPrice}
                 setIQuantity={setIQuantity}
                 handleAddItem={handleAddItem}
               />
@@ -64,7 +76,8 @@ function App() {
                 itemCart={itemCart}
                 iQuantity={iQuantity}
                 setIQuantity={setIQuantity}
-                price={iPrice}
+                setPrice={setPrice}
+                price={price}
               />
             }
           />

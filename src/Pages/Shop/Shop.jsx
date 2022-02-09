@@ -6,13 +6,11 @@ import Product from "../../Components/Product/Product";
 import Cart from "../../Components/Cart/Cart";
 
 export default function Shop({
-  item,
+  count,
   productData,
-  iPrice,
-  iName,
+  price,
   iQuantity,
   itemCart,
-  setIPrice,
   setIQuantity,
   handleAddItem,
 }) {
@@ -25,9 +23,8 @@ export default function Shop({
       </div>
       <div className="s-right">
         <Cart
-          price={iPrice}
-          setPrice={setIPrice}
-          name={iName}
+          count={count}
+          price={price}
           setIQuantity={setIQuantity}
           iQuantity={iQuantity}
           itemCart={itemCart}
